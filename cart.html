@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eden Beads — Cart & Checkout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Eden Beads</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart <span id="cart-count-2" class="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="cart-section">
+      <h2>Your Cart</h2>
+      <ul id="cart-items" class="cart-list">
+        <!-- items rendered here -->
+      </ul>
+
+      <div class="cart-summary">
+        <div class="sum-left">Total</div>
+        <div class="sum-right">Rs. <span id="cart-total">0</span></div>
+      </div>
+
+      <div class="cart-actions">
+        <button class="btn ghost" onclick="clearCart()">Clear Cart</button>
+        <a class="btn ghost" href="index.html">Continue shopping</a>
+      </div>
+    </section>
+
+    <section class="checkout-card">
+      <h2>Checkout</h2>
+
+      <form id="checkout-form" class="checkout-form">
+        <div class="row">
+          <input id="cx-name" type="text" placeholder="👩 Your name" required>
+          <input id="cx-phone" type="tel" placeholder="📱 Phone (e.g. 03xxxxxxxxx)" required>
+        </div>
+
+        <input id="cx-address" type="text" placeholder="🏠 Delivery address" required>
+
+        <label class="label">Payment method</label>
+        <select id="cx-payment" required>
+          <option value="">Choose payment</option>
+          <option value="easypaisa">Easypaisa</option>
+          <option value="jazzcash">JazzCash</option>
+          <option value="bank">Bank transfer</option>
+          <option value="cod">Cash on delivery</option>
+        </select>
+
+        <div id="payment-instructions" class="payment-instructions">
+          <!-- dynamic instructions / Open Payment button appears here -->
+          <div class="hint">Select a payment method to see quick actions.</div>
+        </div>
+
+        <label class="label">Upload payment screenshot (optional)</label>
+        <input id="cx-screenshot" type="file" accept="image/*">
+
+        <div class="notice">After you click <strong>Place order on WhatsApp</strong>, WhatsApp will open with your order text. <em>Please attach the payment screenshot manually in WhatsApp and send.</em></div>
+
+        <button id="place-order" class="btn">Place order on WhatsApp</button>
+      </form>
+
+      <div id="receipt" class="receipt hidden" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2025 Eden Beads · handcrafted</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

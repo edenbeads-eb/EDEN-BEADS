@@ -1,0 +1,83 @@
+/* Palette: #FFF5F2, #F5BABB, #F5D2D2 */
+/* Poppins font is loaded in HTML files */
+:root{
+  --bg: #FFF5F2;
+  --accent: #F5BABB;
+  --soft: #F5D2D2;
+  --muted: #6b4b57;
+  --card: #FFFFFF;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:#333;
+  -webkit-font-smoothing:antialiased;
+}
+
+.site-header{
+  background:var(--accent);
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:3px solid #f4a7bb;
+}
+.logo{font-weight:700; color:#fff; font-size:1.15rem}
+nav a{color:#fff; text-decoration:none; margin-left:14px; font-weight:600}
+.cart-count{
+  background:#fff; color:var(--muted); padding:3px 8px; border-radius:999px; margin-left:8px; font-size:0.85rem;
+}
+
+/* main layout */
+main{max-width:1100px; margin:20px auto; padding:0 16px}
+.hero{padding:32px 0; text-align:center}
+.hero h1{margin:0; color:var(--muted); font-size:1.6rem}
+.lead{color:#6b4b57; margin-top:8px}
+.cta{display:inline-block; margin-top:12px; padding:8px 16px; background:var(--muted); color:#fff; border-radius:999px; text-decoration:none}
+
+/* shop grid */
+.shop{padding:10px 0 36px}
+.shop h2{text-align:center; color:var(--muted); margin-bottom:14px}
+.grid{display:flex; gap:18px; justify-content:center; flex-wrap:wrap}
+.card{width:220px; background:var(--card); border-radius:14px; padding:14px; text-align:center; box-shadow:0 8px 24px rgba(107,75,87,0.06); border:1px solid #f7d2db}
+.card img{width:100%; border-radius:10px; display:block; margin-bottom:10px}
+.card h3{margin:6px 0; font-size:1rem; color:var(--muted)}
+.meta{color:#7a616a; font-size:0.9rem}
+.price{font-weight:700; color:var(--muted); margin-top:8px}
+.btn{background:var(--accent); color:#fff; border:none; padding:8px 14px; border-radius:12px; cursor:pointer; font-weight:700}
+.btn:hover{opacity:0.95}
+.btn.ghost{background:transparent; color:var(--muted); border:1px solid #f7d2db}
+
+/* cart page */
+.cart-section, .checkout-card{background:var(--card); border-radius:14px; padding:16px; border:1px solid #f7d2db; box-shadow:0 8px 24px rgba(107,75,87,0.04); margin-bottom:18px}
+.cart-list{list-style:none; padding:0; margin:0}
+.cart-list li{display:flex; justify-content:space-between; align-items:center; background:#fff8fb; padding:10px 12px; border-radius:10px; margin-bottom:8px; font-weight:600}
+.cart-summary{display:flex; justify-content:space-between; align-items:center; margin-top:8px; padding:8px 4px}
+.cart-actions{margin-top:12px; display:flex; gap:10px}
+
+/* checkout */
+.checkout-card h2{margin-top:0; color:var(--muted)}
+.checkout-form{display:flex; flex-direction:column; gap:10px}
+.row{display:flex; gap:8px}
+.row input{flex:1}
+.checkout-form input, .checkout-form select{padding:10px;border-radius:10px;border:1px solid #f7d2db}
+.checkout-form input:focus, .checkout-form select:focus{outline:none; box-shadow:0 6px 18px rgba(244,167,187,0.12)}
+.payment-instructions{padding:10px; border-radius:10px; background:#fff8fb; border:1px dashed #f7d2db; color:#6b4b57}
+.notice{font-size:0.9rem; color:#6b4b57; margin-top:8px}
+
+/* receipt */
+.receipt{margin-top:12px; padding:12px; border-radius:10px; background:var(--soft); border:1px solid #f1d9e0}
+.hidden{display:none}
+
+/* footer */
+.site-footer{text-align:center;padding:14px;color:#6b4b57; margin-top:12px}
+
+/* responsive */
+@media (max-width:640px){
+  .row{flex-direction:column}
+  .grid{gap:12px}
+  .card{width:100%}
+}
