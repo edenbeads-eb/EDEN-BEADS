@@ -5,50 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Cart</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body class="cart-page">
-  <header>
-    <h1>Your Cart 🛒</h1>
-  </header>
+<body>
+  <header>Your Cart</header>
 
-  <main>
-    <!-- Cart Items -->
-    <section id="cart-items" class="card pastel-box">
-      <h2>Items in Cart</h2>
-      <ul id="cart-list"></ul>
-      <p class="total">Total: Rs. <span id="cart-total">0</span></p>
-      <button onclick="clearCart()" class="btn danger">Clear Cart</button>
-    </section>
+  <div class="cart-container">
+    <div id="cart-items"></div>
+    <div class="total">Total: Rs. <span id="cart-total">0</span></div>
 
-    <!-- Checkout Form -->
-    <section class="card pastel-box">
-      <h2>Checkout Form</h2>
-      <form id="checkout-form">
-        <label>Name:</label>
-        <input type="text" id="name" required>
+    <h3>Checkout</h3>
+    <form id="checkout-form" onsubmit="sendOrder(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <textarea id="address" placeholder="Delivery Address" required></textarea>
+      
+      <label for="payment">Choose Payment Method:</label>
+      <select id="payment" required>
+        <option value="easypaisa">Easypaisa</option>
+        <option value="jazzcash">JazzCash</option>
+        <option value="cod">Cash on Delivery</option>
+      </select>
 
-        <label>Phone Number:</label>
-        <input type="text" id="phone" required>
+      <p>Send Easypaisa/JazzCash to: <strong>0324-8037329</strong></p>
+      <p>After payment, please send a screenshot on WhatsApp.</p>
 
-        <label>Delivery Address:</label>
-        <textarea id="address" required></textarea>
-
-        <label>Payment Method:</label>
-        <select id="payment-method" required>
-          <option value="">--Select--</option>
-          <option value="COD">Cash on Delivery</option>
-          <option value="Easypaisa">Easypaisa</option>
-          <option value="JazzCash">JazzCash</option>
-        </select>
-
-        <label>If Online Payment → Paste Screenshot Link:</label>
-        <input type="url" id="payment-ss" placeholder="Google Drive / Imgur link">
-
-        <button type="submit" class="btn">Place Order ✅</button>
-      </form>
-    </section>
-  </main>
-
-  <script src="cart.js"></script>
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
 </body>
 </html>
+
+</html>
+
