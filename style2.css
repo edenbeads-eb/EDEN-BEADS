@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #FFF5F2;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #F5BABB;
+  color: #fff;
+}
+
+.card {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 500px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.pastel-box {
+  border: 2px solid #F5D2D2;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #F5D2D2;
+  background: #FFF5F2;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.btn {
+  display: inline-block;
+  background: #F5BABB;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  margin-top: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #F5D2D2;
+}
+
+.btn.danger {
+  background: #f28b82;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin: 8px 0;
+}
