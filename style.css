@@ -25,10 +25,6 @@ body{
   align-items:center;
   border-bottom:3px solid #f4a7bb;
 }
-.logo{font-weight:700; color:#fff; font-size:1.15rem}
-nav a{color:#fff; text-decoration:none; margin-left:14px; font-weight:600}
-.cart-count{
-  background:#fff; color:var(--muted); padding:3px 8px; border-radius:999px; margin-left:8px; font-size:0.85rem
 /* Logo container */
 .logo {
   display: flex;
@@ -100,6 +96,7 @@ main{max-width:1100px; margin:20px auto; padding:0 16px}
 form button:hover {
   background: #F28C8C;
 }
+
 
 
 
