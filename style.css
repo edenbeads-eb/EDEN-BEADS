@@ -28,13 +28,22 @@ body{
 .logo{font-weight:700; color:#fff; font-size:1.15rem}
 nav a{color:#fff; text-decoration:none; margin-left:14px; font-weight:600}
 .cart-count{
-  background:#fff; color:var(--muted); padding:3px 8px; border-radius:999px; margin-left:8px; font-size:0.85rem;
-}
+  background:#fff; color:var(--muted); padding:3px 8px; border-radius:999px; margin-left:8px; font-size:0.85rem
 /* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Logo image */
 .logo img {
-  height: 60px;   /* Adjust size if needed */
-  width: auto;    /* Keeps proportions */
-  display: block;
+  height: 35px;   /* small size, adjust if needed */
+  width: auto;
+  margin-right: 8px; /* space between logo and text */
 }
 
 /* main layout */
@@ -91,6 +100,7 @@ main{max-width:1100px; margin:20px auto; padding:0 16px}
 form button:hover {
   background: #F28C8C;
 }
+
 
 
 
